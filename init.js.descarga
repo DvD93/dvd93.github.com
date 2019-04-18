@@ -184,7 +184,7 @@ function arlo_tm_jarallax(){
 		
 		element.jarallax({
 			speed: customSpeed,
-			automaticResize: true
+			automaticResize: false
 		});
 	});
 }
