@@ -13,7 +13,7 @@ servir como portafolio o como CV. En mi caso la adapté para un formato de portf
 * Primero es necesaria una cuenta de Github y tener instalado git en tu computadora.
 
 * Crea un repositorio con el siguiente formato [username].github.com donde username es tu nombre de usuario en Github. Por ejemplo mi 
-usuario es dvd93 por lo tanto mi repositorio se llama: dvd93.github.com. Con este formato Github asignará el repositorio como una página
+usuario es dvd93 por lo tanto mi repositorio se llama: [dvd93.github.com](dvd93.github.com). Con este formato Github asignará el repositorio como una página
 web.
 
 * En caso de que tengas conocimiento de HTML, CSS y JavaScript puedes construir tu página web desde 0. Si deseas acelerar el proceso o 
@@ -87,7 +87,7 @@ Medios de contacto: Formulario de contacto y correo
 
 ### License
 
-Copyright © 2019 dvd93.github.com
+Copyright © 2019 **dvd93.github.com**
 
 Portfolio inspirado en: 
 ##### [template de Arlo - Personal / Portfolio / Resume Template.](http://preview.themeforest.net/item/arlo-personal-portfolio-template/full_screen_preview/23175475)
