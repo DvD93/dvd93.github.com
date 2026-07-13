@@ -1,0 +1,181 @@
+.experience-section {
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding-left: 30px;
+}
+
+/* Vertical line */
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            var(--color-amber-orange) 5%,
+            var(--color-amber-orange) 95%,
+            transparent 100%);
+    opacity: 0.5;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Icon on the line */
+.timeline-icon {
+    position: absolute;
+    left: -9px;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-dark-midnight);
+    border: 2px solid var(--color-amber-orange);
+    color: var(--color-amber-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(227, 135, 45, 0.25);
+    z-index: 2;
+}
+
+/* Card */
+.timeline-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+}
+
+.timeline-card:hover {
+    border-color: rgba(227, 135, 45, 0.4);
+    box-shadow: var(--glass-shadow);
+    transform: translateX(4px);
+}
+
+/* Role title */
+.timeline-role {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-amber-orange);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.01em;
+}
+
+/* Info: Company + Date */
+.timeline-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.timeline-company {
+    font-weight: 600;
+    color: var(--color-off-white);
+}
+
+.timeline-separator {
+    color: var(--color-amber-orange);
+    font-size: 0.7rem;
+}
+
+.timeline-info time {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Task List */
+.timeline-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.timeline-tasks li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.timeline-tasks li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-amber-orange);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-line {
+        left: 15px;
+    }
+
+    .timeline-icon {
+        left: -6px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-card {
+        padding: 1.25rem;
+    }
+
+    .timeline-role {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .timeline-info {
+        font-size: 0.85rem;
+    }
+
+    .timeline-tasks li {
+        font-size: 0.9rem;
+    }
+}

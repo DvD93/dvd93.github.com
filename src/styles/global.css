@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Palette */
+  --color-orange: #FA7107;
+  --color-amber-orange: #E3872D;
+  --color-amber-light: #F4A261;
+  --color-dark-midnight: #041230;
+  --color-midnight-mid: #1A2744;
+  --color-midnight-base: #010940;
+  --color-midnight-dark: rgba(7, 23, 55, .7);
+  --color-blue-overlay: rgba(7, 23, 55, .23);
+  --color-blue-overlay-light: rgba(7, 23, 55, 0.7);
+
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-off-white: #f0f0f0;
+  --color-text-muted: #b0b0b0;
+  --color-text-gray: #E5E4E29c;
+  --color-light-gray: #c9c9c9;
+  --color-black: #000000;
+
+  /* Gold Tones */
+  --color-gold-base: #efb810;
+  --color-gold-light: #CFB53B;
+  --color-gold-warm: #B59410;
+  --color-gold-deep: #996515;
+  --color-gold-glow: rgba(232, 80, 14, 0.412);
+
+  /* Tech Highlight Colors */
+  --color-tech-selenium: #43B02A;
+  --color-tech-assertj: #26A69A;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(4, 18, 48, 0.6);
+  --glass-border: rgba(227, 135, 45, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --content-max-width: 1100px;
+  --section-padding: 4rem 2.5rem;
+
+  /* Font */
+  --font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Decoration */
+  --decoration-links: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  font-family: var(--font-family);
+  min-height: 100vh;
+  color: var(--color-white);
+  line-height: 1.6;
+  background: var(--color-dark-midnight);
+  overflow-x: hidden;
+}
+
+/* Background image as pseudo-element for better overlay control */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/background-image.jpg") center / cover no-repeat;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--color-blue-overlay);
+  z-index: -1;
+}
+
+/*  BASE ELEMENTS  */
+a {
+  text-decoration: var(--decoration-links);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-amber-orange);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  SKIP LINK (Accessibility)  */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-amber-orange);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  z-index: 1000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*  MAIN LAYOUT  */
+.main-container {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+}
+
+/*  SECTION TITLES (reusable)  */
+.section-title {
+  width: 100%;
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--color-amber-orange);
+  border-radius: 3px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+#contact .section-title h2,
+#about .section-title h2 {
+  color: var(--color-black);
+}
+
+
+.section-title span {
+  font-size: 1.1rem;
+  color: var(--color-orange);
+  font-weight: 500;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+
+/*  RESPONSIVE BREAKPOINTS  */
+
+/* Tablet / Small laptop */
+@media (max-width: 992px) {
+  .main-container {
+    margin-left: 0;
+  }
+}
+
+/* Mobile large */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3.5rem 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-title span {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile small */
+@media (max-width: 400px) {
+  :root {
+    --section-padding: 3rem 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+}
+
+@media (max-width: 360px) {}

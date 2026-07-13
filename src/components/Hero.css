@@ -1,0 +1,289 @@
+.hero-container {
+    padding: var(--section-padding);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-blue-overlay);
+}
+
+.hero-section {
+    max-width: var(--content-max-width);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+/* Profile Image  */
+.profile-img {
+    flex-shrink: 0;
+}
+
+.profile-img img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid var(--color-amber-orange);
+    box-shadow:
+        0 0 0 6px var(--color-gold-glow),
+        0 0 20px rgba(239, 184, 16, 0.15),
+        0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.profile-img img:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 0 8px var(--color-gold-glow),
+        0 0 30px rgba(239, 184, 16, 0.2),
+        0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/*  Hero Content  */
+.hero-content {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hero-content h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--color-orange), var(--color-black));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0.15rem 0.50rem 0px rgba(0, 0, 0, 0.7));
+}
+
+
+/*  Intro Text  */
+.hero-intro {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+
+    text-shadow: 0 2px 8px rgba(4, 18, 48, 0.95);
+}
+
+/* ---- Tech Highlights (Selenium, AssertJ, etc.) ---- */
+.tech-highlight {
+    font-weight: 800;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    display: inline;
+    transition: all var(--transition-fast);
+}
+
+
+/*  Selenium Variant  */
+.tech-highlight--selenium {
+    color: #54C535;
+
+    text-shadow:
+        0 0 2px #041230,
+        0 1px 3px #041230,
+        0 4px 8px rgba(4, 18, 48, 0.6);
+}
+
+.tech-highlight--selenium:hover {
+    background: rgba(77, 255, 53, 0.12);
+    box-shadow: 0 0 14px rgba(77, 255, 53, 0.12);
+}
+
+/*  AssertJ Variant  */
+.tech-highlight--assertj {
+    color: #fdd778;
+
+    text-shadow:
+        0 0 5px #000103,
+        0 1px 3px #041230,
+        0 4px 8px rgba(4, 18, 48, 0.6);
+}
+
+.tech-highlight--assertj:hover {
+    background: rgba(250, 113, 7, 0.22);
+    box-shadow: 0 0 14px rgba(250, 113, 7, 0.4);
+}
+
+/* Performance Varian */
+.tech-highlight--performance {
+    color: var(--color-white);
+    font-weight: 600;
+    position: relative;
+    padding: 0 4px;
+    display: inline-block;
+    border-radius: 4px;
+    text-shadow: 0 2px 4px rgba(4, 18, 48, 0.9);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    cursor: pointer;
+}
+
+.tech-highlight--performance:hover {
+    background: rgba(180, 205, 218, 0.22);
+    box-shadow: 0 0 14px rgba(117, 134, 143, 0.4);
+}
+
+.hero-cta-text {
+    color: var(--color-amber-orange);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1rem;
+    text-shadow:
+        0 2px 4px rgba(4, 18, 48, 0.8),
+        0 0 10px rgba(227, 135, 45, 0.25);
+}
+
+
+/*  Action Buttons  */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+/*  HERO BUTTON (Diagonal from the bottom-left corner)  */
+.hero-btn--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    border: 2px solid var(--color-amber-orange);
+    color: #ffffff;
+    background-color: #041230;
+
+    /*  Angle: 45 degrees for the line to rise from the bottom left corner */
+    background-image: linear-gradient(45deg, var(--color-amber-orange) 50%, transparent 50%);
+    background-size: 250% 100%;
+
+    /*  Initial state: Orange stays hidden at the bottom left  */
+    background-position: 100% 0%;
+
+    transition: background-position 0.4s ease-in-out, color 0.3s ease;
+}
+
+.hero-btn--primary:hover {
+    /*  On hover, the orange rises and covers everything diagonally  */
+    background-position: 0% 0%;
+    color: #ffffff;
+    color: var(--color-dark-midnight);
+    border-color: var(--color-orange);
+}
+
+.hero-btn--primary span {
+    position: relative;
+    z-index: 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1290px) {
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        margin-top: 15px;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        margin-top: 0px;
+        min-height: auto;
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-img img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content .hero-intro,
+    .hero-content .hero-cta-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-intro {
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.4;
+
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 80%;
+        text-align: center;
+    }
+}

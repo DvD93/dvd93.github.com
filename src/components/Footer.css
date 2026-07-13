@@ -1,0 +1,120 @@
+.footer-container {
+    /* position the button at the top  */
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding);
+
+    /* compensation sidebar */
+    margin-left: 280px;
+
+    /* dark navy blue overlay on the keyboard image */
+    background: linear-gradient(rgb(6, 18, 44, 0.60), rgba(2, 14, 36, 0.92)),
+        url("../assets/section-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-content {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* icon of quotes orange centered upper */
+.footer-quote-icon {
+    color: var(--color-amber-orange);
+    font-size: 4rem;
+    font-family: serif;
+    line-height: 1;
+    margin-bottom: -0.5rem;
+}
+
+/* text of the phrase  */
+.footer-phrase {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+/* Author of the phrase */
+.footer-author {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* button go up */
+.scroll-to-top {
+    position: fixed;
+    /* now floats on the screen */
+    bottom: 30px;
+    right: 40px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-amber-orange);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 99;
+
+    /* Hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent click while invisible */
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+/* When it has the class .visible, it is displayed smoothly */
+.scroll-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: var(--color-amber-light, #f7a24a);
+}
+
+/* internal white arrow */
+.arrow-up {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+    .footer-container {
+        margin-left: 0;
+        /* We remove the sidebar space on mobile */
+        padding: 3rem 1.5rem;
+    }
+
+    .footer-phrase {
+        font-size: 1.2rem;
+    }
+
+    .scroll-to-top {
+        right: 20px;
+        /* More attached to the edge on mobile */
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
