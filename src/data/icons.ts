@@ -8,7 +8,7 @@ import MongoDBIcon from '../assets/svg/MongoDB.svg'
 import NewRelicIcon from '../assets/svg/NewRelic.svg'
 import AwsIcon from '../assets/svg/Amazon-Web-Services.svg'
 import GitIcon from '../assets/svg/git.svg'
-import JmeterIcon from '../assets/svg/jmeter.svg'
+import JmeterIcon from '../assets/svg/Jmeter.svg'
 // import CypressIcon from '../assets/svg/cypress_io_icon.svg'
 // import DockerIcon from '../assets/svg/docker.svg'
 
