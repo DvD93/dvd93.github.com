@@ -32,7 +32,7 @@ export const Experience = () => {
                                 </div>
                                 <ul className="timeline-tasks">
                                     {experience.taskIds.map((taskId) => (
-                                        <li key={taskId}>{expText.tasks[taskId]}</li>
+                                        <li key={taskId}>{expText.tasks[taskId as keyof typeof expText.tasks]}</li>
                                     ))}
                                 </ul>
                             </div>

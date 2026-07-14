@@ -11,7 +11,7 @@ const NAV_LINKS = [
     { sectionId: 'training' },
     { sectionId: 'services' },
     { sectionId: 'contact' }
-]
+] as const;
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
