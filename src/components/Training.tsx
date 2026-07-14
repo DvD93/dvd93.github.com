@@ -3,19 +3,14 @@ import { FaGraduationCap } from "react-icons/fa6"
 import { HiOutlineAcademicCap } from "react-icons/hi2"
 import { useLang } from '../i18n/LanguageContext'
 
-const EDUCATION_IDS = ['edu-1', 'edu-2', 'edu-3'];
+const EDUCATION_IDS = ['edu-1', 'edu-2', 'edu-3'] as const;
 
-type CourseItem = {
-    id: string
-    platform?: string
-}
-
-const COURSES: CourseItem[] = [
+const COURSES = [
     { id: "course-1", platform: "Informatorio Chaco, Argentina" },
     { id: "course-2", platform: "Globant Chaco, Argentina" },
     { id: "course-3", platform: "Polo IT Corrientes, Argentina" },
     { id: "course-4", platform: "Informatorio, Chaco, Argentina" }
-]
+] as const;
 
 export const Training = () => {
     const { t } = useLang();
