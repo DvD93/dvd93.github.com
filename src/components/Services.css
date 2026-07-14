@@ -1,0 +1,88 @@
+.services-section {
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background: linear-gradient(135deg,
+            rgba(4, 18, 48, 0.95) 0%,
+            rgba(26, 39, 68, 0.9) 50%,
+            rgba(4, 18, 48, 0.95) 100%);
+    border-top: 1px solid rgba(227, 135, 45, 0.1);
+    border-bottom: 1px solid rgba(227, 135, 45, 0.1);
+}
+
+/* Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Service Card */
+.service-card {
+    padding: 2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(227, 135, 45, 0.5);
+    box-shadow: 0 12px 35px rgba(227, 135, 45, 0.12);
+}
+
+/* Icon */
+.service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(227, 135, 45, 0.12);
+    color: var(--color-amber-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: all var(--transition-base);
+}
+
+.service-card:hover .service-icon {
+    background: rgba(227, 135, 45, 0.2);
+    transform: scale(1.05);
+}
+
+/* Service Name */
+.service-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: 0.01em;
+}
+
+/* Description */
+.service-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+}
