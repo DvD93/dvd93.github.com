@@ -150,6 +150,11 @@
         right: -1px;
     }
 
+    /* Hidden typewriter on mobile  */
+    .text_typing.text_typing-light {
+        display: none;
+    }
+
     .about-paragraph {
         text-align: left;
         line-height: 1.5;

@@ -1,8 +1,21 @@
 .text_typing {
     display: flex;
-    justify-content: left;
-    /* justify-content: center; */
+    justify-content: flex-start;
     width: 100%;
+    min-height: 3rem;
+}
+
+@media (max-width: 768px) {
+    .text_typing {
+        justify-content: center;
+        min-height: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text_typing {
+        min-height: 6.5rem;
+    }
 }
 
 /* ::::: Variant: dark (default, dark background) ::::: */
@@ -123,6 +136,6 @@
     .text_typing-dark .about-tw-prefix span,
     .text_typing-light .about-tw-prefix span {
         font-size: 1.3rem;
-        white-space: wrap;
+        white-space: normal;
     }
 }
