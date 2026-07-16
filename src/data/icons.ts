@@ -9,6 +9,7 @@ import NewRelicIcon from '../assets/svg/NewRelic.svg'
 import AwsIcon from '../assets/svg/Amazon-Web-Services.svg'
 import GitIcon from '../assets/svg/git.svg'
 import JmeterIcon from '../assets/svg/Jmeter.svg'
+import CursorIcon from '../assets/svg/cursor.svg'
 // import CypressIcon from '../assets/svg/cypress_io_icon.svg'
 // import DockerIcon from '../assets/svg/docker.svg'
 
@@ -24,5 +25,6 @@ export const SKILLS_DATA = [
     { id: 'aws', icon: AwsIcon, title: 'AWS' },
     { id: 'git', icon: GitIcon, title: 'GIT' },
     { id: 'jmeter', icon: JmeterIcon, title: 'JMETER' },
+    { id: 'cursor', icon: CursorIcon, title: 'CURSOR' }
 ]
 
